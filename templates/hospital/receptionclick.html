@@ -1,0 +1,36 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+  <style media="screen">
+
+
+    .jumbotron {
+      margin-top: 10px;
+      height: 100vh;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/receptionist1.png" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="jumbotron" style="margin-bottom:0px;">
+  <h1 class="display-4" style="text-align:center;">Hello, Receptionist</h1>
+  <p class="lead">Welcome to Woodland Hospital</p>
+  <hr class="my-4">
+
+  <p class="lead">
+    <a class="btn btn-danger btn-lg" href="/receptionsignup" role="button">Sign Up</a>
+    <a class="btn btn-success btn-lg" href="/receptionlogin" role="button">Sign In</a>
+  </p>
+</div>
+
+{% endblock content %}

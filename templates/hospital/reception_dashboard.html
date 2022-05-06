@@ -1,0 +1,83 @@
+{% extends 'hospital/reception_base.html' %}
+{% load static %}
+{% block content %}
+{%include 'hospital/reception_dashboard_cards.html'%}
+
+<br><br><br>
+<div class="container">
+  <div class="row">
+    
+
+
+    <div class="panel panel-primary col-md-5" style="margin-left:5%;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Recent Patient</h6>
+      </div>
+      <table class="table table-hover table-striped" id="dev-table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>Symptoms</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Type</th>
+            <th>Status</th>
+
+          </tr>
+        </thead>
+        {% for p in patients %}
+        <tr>
+          <td> {{p.get_name}}</td>
+          <td>{{p.symptoms}}</td>
+          <td>{{p.mobile}}</td>
+          <td>{{p.address}}</td>
+          <td>{{p.patienttype}}</td>
+          {%if p.status%}
+          <td> <span class="label label-primary">Admitted</span></td>
+          {% else %}
+          <td> <span class="label label-success">On Hold</span></td>
+          {% endif %}
+
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="panel panel-primary col-md-5" style="margin-left:5%;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Recent Lab Recepient</h6>
+      </div>
+      <table class="table table-hover table-striped" id="dev-table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Name</th>
+            <th>scheduled date</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>test</th>
+            <th>Status</th>
+
+          </tr>
+        </thead>
+        {% for l in labcustomers %}
+        <tr>
+          <td> {{l.get_name}}</td>
+          <td>{{l.scheduledate}}</td>
+          <td>{{l.mobile}}</td>
+          <td>{{l.address}}</td>
+          <td>{{l.test}}</td>
+          {%if l.status%}
+          <td> <span class="label label-primary">Recieved</span></td>
+          {% else %}
+          <td> <span class="label label-success">On Hold</span></td>
+          {% endif %}
+
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>HMS - Django</title>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 10px;
+      height: 100vh;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/aboutus.png" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+    .btn btn-primary btn-lg{
+      position: relative;
+      bottom: -1px;
+         }
+  </style>
+  <title>Aboutus</title>
+</head>
+
+<body style="background-color: azure;">
+  {% include "hospital/navbar.html" %}
+  <br><br>
+  <center>
+    
+  </center>
+  <div  class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    
+    <h1 class="display-4"><center><b>About Us</b></center></h1>
+    <hr class="my-4">
+    
+    <p class="lead"><b>
+      Woodland Hospital has over two decades of experience in the healthcare sector, and is known for providing quality healthcare and valuable experience to all patients. Our healthcare offerings are supported by a team of compassionate and dedicated medical professionals who have rich knowledge and experience in their respective domains
+    </b></p>
+  </div>
+  {% include "hospital/footer.html" %}
+</body>
+
+
+</html>

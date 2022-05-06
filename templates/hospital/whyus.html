@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   
+<head>
+  	<title>Why Choose Us Section </title>
+      {% include "hospital/navbar.html" %}
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  	<!-- Bootstrap JS -->
+  	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- Why Us Section -->
+	<section class="why-us">
+		<div class="container">
+	        <div class="row">
+				<div class="col-md-8 offset-md-2">
+					<h2 class="mt-5 text-center">Why Choose Us</h2>
+					<p class="mb-5 text-center">Our reputation for outstanding care and family-like atmosphere, together with advanced medical technology and facilities ensures we attract leading consultants and specialists from the industry to work with us..</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>01</span>
+						<h4>Clinical Excellence</h4>
+						<p>We strive to convert distant medical possibilities to current procedures, aiding our patients We are committed to fulfilling health aspirations of citizens across the globe</p>
+						<img src="static/images/first.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>02</span>
+						<h4>Latest Technology</h4>
+						<p>We embrace high precision technologies for giving you a world class healthcare experience. We also bring non-invasive treatments wherever possible, that go beyond cutting edge.</p>
+						<img src="static/images/second.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>03</span>
+						<h4>Personalized Care</h4>
+						<p>We provide best-in-the-class healthcare experience with our high-precision technologies, and try to suggest non-invasive treatments to keep our patient’s minds at ease.</p>
+						<img src="static/images/third1.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>04</span>
+						<h4>Affordable treatment</h4>
+						<p>We believe in providing the best medical treatments at an affordable cost . We thrive on the healthy state and wellbeing of our patients keeping the costs to the minimal.</p>
+						<img src="static/images/fourth.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>05</span>
+						<h4>Friendly processes</h4>
+						<p>At Woodland hospital patient centricity is at core of every activity . Our patient rooms, lounges, the building structure is planned to make your stay convenient. The staff is well-trained to understand individual needs and extend personalized care and support.</p>
+						<img src="static/images/fifth.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>06</span>
+						<h4>High survival rates</h4>
+						<p>With advanced machinery handled by Experienced ,Qualified and hardworking doctors, we value the importance of quality care. Through a multidisciplinary approach, we help you get treated by the best.</p>
+						<img src="static/images/sixth.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Why Us Section -->
+    {% include "hospital/footer.html" %}
+
+</body>
+</html>
+<style>
+    .why-us h2 {
+        position: relative;
+        margin-bottom: 35px;
+        padding: 30px;
+    }
+    .why-us h2::after {
+        content: "";
+        width: 120px;
+        height: 3px;
+        display: inline-block;
+        background: rgb(109, 19, 97);
+        color:#ffffff;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: -20px;
+        margin: 0 auto;
+    }
+    
+    .why-us .box {
+        padding: 50px 30px;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
+        transition: 0.5s;
+        color: #ffffff;
+        position: relative;
+        background-color: rgb(109, 19, 97);
+        max-height: 230px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    .why-us .box:hover {
+        padding: 30px 30px 70px 30px;
+        box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.20);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .why-us .box img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0;
+        transition:all ease 1s; 
+    }
+    .why-us .box:hover img {
+        opacity: 1;
+    }
+    .why-us .box span {
+        display: block;
+        font-size: 56px;
+        font-weight: 700;
+        color:#ffffff;
+      
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        line-height: normal;
+    }
+    .why-us .box h4 a {
+        font-size: 24px;
+        font-weight: 600;
+        padding: 0;
+        margin: 20px 0;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .why-us .box p {
+        color: #fffdfd;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    .why-us .box:hover span,
+    .why-us .box:hover h4 a,
+    .why-us .box:hover p {
+          color: #ffffff;
+    }
+    </style>
